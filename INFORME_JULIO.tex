@@ -1,0 +1,998 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Informe de Julio},
+  pdfauthor={M-M},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\title{Informe de Julio}
+\author{M-M}
+\date{2024-08-11}
+
+\begin{document}
+\maketitle
+
+\hypertarget{primeros-datos}{%
+\subsection{PRIMEROS DATOS}\label{primeros-datos}}
+
+\hypertarget{cantidad-final-de-unidades-vendidas}{%
+\paragraph{Cantidad final de unidades
+vendidas:}\label{cantidad-final-de-unidades-vendidas}}
+
+\begin{verbatim}
+## [1] 1566
+\end{verbatim}
+
+\hypertarget{tabla-de-cantidades-por-tipo-de-buzo}{%
+\paragraph{Tabla de cantidades por tipo de
+buzo}\label{tabla-de-cantidades-por-tipo-de-buzo}}
+
+\begin{longtable}[l]{lr}
+\toprule
+tipo & cantidad\\
+\midrule
+UNI & 1326\\
+FEED & 161\\
+PERSO & 67\\
+HP & 12\\
+\bottomrule
+\end{longtable}
+
+\hypertarget{resumen-de-agregados-de-la-tanda}{%
+\paragraph{Resumen de agregados de la
+tanda}\label{resumen-de-agregados-de-la-tanda}}
+
+\begin{itemize}
+\tightlist
+\item
+  Cantidad de pedidos
+\item
+  Cantidad de Buzos
+\item
+  Ingresos totales \#Gastos de correo argentino
+\end{itemize}
+
+\begin{longtable}[t]{rrrrr}
+\toprule
+Q\_pedidos & Q\_buzos & ingresos & correoarg & motomensajeria\\
+\midrule
+1173 & 1566 & 69110305 & 4633305 & 895000\\
+\bottomrule
+\end{longtable}
+
+\hypertarget{clientes}{%
+\subsubsection{Clientes}\label{clientes}}
+
+\hypertarget{top-10-clientes}{%
+\paragraph{Top 10 clientes}\label{top-10-clientes}}
+
+\begin{longtable}[t]{llr}
+\toprule
+nombre & instagram & total\_gastado\\
+\midrule
+Stefania Alba & stefaniaalba & 621699\\
+Celeste Maldonado & @CELES.MALDONADO & 492000\\
+Maria virginia lucia Tuells & MVIKU29 & 369000\\
+Julia Manchon & @juliamanchon & 287000\\
+Ana Clara Torres & clara\_nochia & 246000\\
+\addlinespace
+Romina Melanie Gomila & @rominamg12 & 205966\\
+Nevia Vera & https://www.instagram.com/neviavera/ & 205000\\
+Exequiel Alonso & https://www.instagram.com/rociopereyra21?igsh=Mzl2dTZhdDV5c2dj\&utm\_source=qr & 205000\\
+Romina Currao & romina.currao  PD: Nos unimos varias UNLAMigas, por eso la cantidad jajaja & 205000\\
+Angel Tari Jimenez & https://www.instagram.com/angeltari10?igsh=NnJqMDNjbnFiaWg5 & 204500\\
+\bottomrule
+\end{longtable}
+
+\hypertarget{producciuxf3n}{%
+\subsection{PRODUCCIÓN}\label{producciuxf3n}}
+
+\hypertarget{calculadora-de-tela}{%
+\subsubsection{Calculadora de tela}\label{calculadora-de-tela}}
+
+\textbf{Aclaración:} la version actual de la calculadora de tela no
+calcula la tela para buzos de HP
+
+\hypertarget{calculadora-simple-de-cantidades}{%
+\paragraph{Calculadora simple de
+cantidades}\label{calculadora-simple-de-cantidades}}
+
+\begin{longtable}[t]{lrrr}
+\toprule
+color & cantidad & Kg & rollos\\
+\midrule
+PETROLEO & 750 & 525.0 & 23.86\\
+CREMITA & 603 & 422.1 & 19.19\\
+NA & 34 & 23.8 & 1.08\\
+INGLES & 31 & 21.7 & 0.99\\
+NEGRO & 25 & 17.5 & 0.80\\
+\addlinespace
+LILA & 17 & 11.9 & 0.54\\
+BLANCO & 8 & 5.6 & 0.25\\
+FRANCIA & 8 & 5.6 & 0.25\\
+MELANGE & 7 & 4.9 & 0.22\\
+CELESTE & 4 & 2.8 & 0.13\\
+\bottomrule
+\end{longtable}
+
+\hypertarget{calculadora-completa}{%
+\paragraph{Calculadora completa}\label{calculadora-completa}}
+
+\textbf{Parametros:}
+
+Tela por buzo: \textbf{700g}\\
+Costo del kilo de tela: \textbf{\$10000}\\
+Rib: \textbf{10\% por tela del mismo color}.
+
+\begin{longtable}[t]{lrrrrrrr}
+\toprule
+color & cantidad & Kg & rollos & costoT & rib & costoR & costoF\\
+\midrule
+PETROLEO & 750 & 525.0 & 23.86 & 5250000 & 52.50 & 671475 & 5921475\\
+CREMITA & 603 & 422.1 & 19.19 & 4221000 & 42.21 & 539866 & 4760866\\
+NA & 34 & 23.8 & 1.08 & 238000 & 2.38 & 30440 & 268440\\
+INGLES & 31 & 21.7 & 0.99 & 217000 & 2.17 & 27754 & 244754\\
+NEGRO & 25 & 17.5 & 0.80 & 175000 & 1.75 & 22382 & 197382\\
+\addlinespace
+LILA & 17 & 11.9 & 0.54 & 119000 & 1.19 & 15220 & 134220\\
+BLANCO & 8 & 5.6 & 0.25 & 56000 & 0.56 & 7162 & 63162\\
+FRANCIA & 8 & 5.6 & 0.25 & 56000 & 0.56 & 7162 & 63162\\
+MELANGE & 7 & 4.9 & 0.22 & 49000 & 0.49 & 6267 & 55267\\
+CELESTE & 4 & 2.8 & 0.13 & 28000 & 0.28 & 3581 & 31581\\
+\bottomrule
+\end{longtable}
+
+\hypertarget{listas-para-produccion}{%
+\subsubsection{LISTAS PARA PRODUCCION}\label{listas-para-produccion}}
+
+\hypertarget{listado-para-producciuxf3n-version-1}{%
+\paragraph{Listado para producción version
+1}\label{listado-para-producciuxf3n-version-1}}
+
+\begin{longtable}[t]{lllr}
+\toprule
+capybol & talle & color & cantidad\\
+\midrule
+CAPUCHA & L & CREMITA & 25\\
+CAPUCHA & L & LILA & 1\\
+CAPUCHA & L & NEGRO & 3\\
+CAPUCHA & L & PETROLEO & 56\\
+CAPUCHA & L & NA & 3\\
+\addlinespace
+CAPUCHA & M & CELESTE & 1\\
+CAPUCHA & M & CREMITA & 32\\
+CAPUCHA & M & INGLES & 1\\
+CAPUCHA & M & LILA & 1\\
+CAPUCHA & M & NEGRO & 3\\
+\addlinespace
+CAPUCHA & M & PETROLEO & 51\\
+CAPUCHA & M & NA & 2\\
+CAPUCHA & S & BLANCO & 1\\
+CAPUCHA & S & CELESTE & 1\\
+CAPUCHA & S & CREMITA & 20\\
+\addlinespace
+CAPUCHA & S & INGLES & 2\\
+CAPUCHA & S & LILA & 4\\
+CAPUCHA & S & MELANGE & 1\\
+CAPUCHA & S & NEGRO & 1\\
+CAPUCHA & S & PETROLEO & 42\\
+\addlinespace
+CAPUCHA & S & NA & 1\\
+CAPUCHA & VINTAGE & NA & 1\\
+NO & L & BLANCO & 2\\
+NO & L & CREMITA & 126\\
+NO & L & INGLES & 4\\
+\addlinespace
+NO & L & NEGRO & 3\\
+NO & L & PETROLEO & 159\\
+NO & L & NA & 7\\
+NO & M & CREMITA & 126\\
+NO & M & FRANCIA & 3\\
+\addlinespace
+NO & M & INGLES & 4\\
+NO & M & LILA & 4\\
+NO & M & MELANGE & 1\\
+NO & M & NEGRO & 6\\
+NO & M & PETROLEO & 163\\
+\addlinespace
+NO & M & NA & 8\\
+NO & S & BLANCO & 4\\
+NO & S & CREMITA & 132\\
+NO & S & FRANCIA & 2\\
+NO & S & INGLES & 5\\
+\addlinespace
+NO & S & LILA & 4\\
+NO & S & MELANGE & 3\\
+NO & S & NEGRO & 1\\
+NO & S & PETROLEO & 139\\
+NO & S & NA & 7\\
+\addlinespace
+NO & VINTAGE & BLANCO & 2\\
+NO & VINTAGE & CELESTE & 2\\
+NO & VINTAGE & CREMITA & 179\\
+NO & VINTAGE & FRANCIA & 3\\
+NO & VINTAGE & INGLES & 15\\
+\addlinespace
+NO & VINTAGE & LILA & 3\\
+NO & VINTAGE & MELANGE & 2\\
+NO & VINTAGE & NEGRO & 10\\
+NO & VINTAGE & PETROLEO & 179\\
+NO & VINTAGE & NA & 5\\
+\bottomrule
+\end{longtable}
+
+\hypertarget{listado-para-producciuxf3n-version-2}{%
+\paragraph{Listado para producción version
+2}\label{listado-para-producciuxf3n-version-2}}
+
+color
+
+talle
+
+CAPUCHA
+
+NO
+
+BLANCO
+
+L
+
+NA
+
+2
+
+BLANCO
+
+S
+
+1
+
+4
+
+BLANCO
+
+VINTAGE
+
+NA
+
+2
+
+CELESTE
+
+M
+
+1
+
+NA
+
+CELESTE
+
+S
+
+1
+
+NA
+
+CELESTE
+
+VINTAGE
+
+NA
+
+2
+
+CREMITA
+
+L
+
+25
+
+126
+
+CREMITA
+
+M
+
+32
+
+126
+
+CREMITA
+
+S
+
+20
+
+132
+
+CREMITA
+
+VINTAGE
+
+NA
+
+179
+
+FRANCIA
+
+M
+
+NA
+
+3
+
+FRANCIA
+
+S
+
+NA
+
+2
+
+FRANCIA
+
+VINTAGE
+
+NA
+
+3
+
+INGLES
+
+L
+
+NA
+
+4
+
+INGLES
+
+M
+
+1
+
+4
+
+INGLES
+
+S
+
+2
+
+5
+
+INGLES
+
+VINTAGE
+
+NA
+
+15
+
+LILA
+
+L
+
+1
+
+NA
+
+LILA
+
+M
+
+1
+
+4
+
+LILA
+
+S
+
+4
+
+4
+
+LILA
+
+VINTAGE
+
+NA
+
+3
+
+MELANGE
+
+M
+
+NA
+
+1
+
+MELANGE
+
+S
+
+1
+
+3
+
+MELANGE
+
+VINTAGE
+
+NA
+
+2
+
+NEGRO
+
+L
+
+3
+
+3
+
+NEGRO
+
+M
+
+3
+
+6
+
+NEGRO
+
+S
+
+1
+
+1
+
+NEGRO
+
+VINTAGE
+
+NA
+
+10
+
+PETROLEO
+
+L
+
+56
+
+159
+
+PETROLEO
+
+M
+
+51
+
+163
+
+PETROLEO
+
+S
+
+42
+
+139
+
+PETROLEO
+
+VINTAGE
+
+NA
+
+179
+
+NA
+
+L
+
+3
+
+7
+
+NA
+
+M
+
+2
+
+8
+
+NA
+
+S
+
+1
+
+7
+
+NA
+
+VINTAGE
+
+1
+
+5
+
+\hypertarget{rapido-cuantos-buzos-universitarios-tenemos-por-talle-y-color-sin-pensar-en-capucha-y-bolsillo-aun}{%
+\paragraph{rapido: ¿Cuantos buzos universitarios tenemos por talle y
+color? (sin pensar en capucha y bolsillo
+aun)}\label{rapido-cuantos-buzos-universitarios-tenemos-por-talle-y-color-sin-pensar-en-capucha-y-bolsillo-aun}}
+
+\textbf{Para:} Buzos UNI\\
+\textbf{incluye:} COLOR y TALLE\\
+\textbf{no incluye:} capybol
+
+\begin{longtable}[t]{llr}
+\toprule
+color & talle & cantidad\\
+\midrule
+CREMITA & L & 135\\
+CREMITA & M & 137\\
+CREMITA & S & 137\\
+CREMITA & VINTAGE & 154\\
+PETROLEO & L & 207\\
+\addlinespace
+PETROLEO & M & 205\\
+PETROLEO & S & 174\\
+PETROLEO & VINTAGE & 155\\
+NA & L & 7\\
+NA & M & 6\\
+\addlinespace
+NA & S & 3\\
+NA & VINTAGE & 6\\
+\bottomrule
+\end{longtable}
+
+\hypertarget{tablas-cruzadas}{%
+\subsubsection{TABLAS CRUZADAS:}\label{tablas-cruzadas}}
+
+\textbf{Para:} todos los buzos\\
+\textbf{Incluye:} COLOR y TALLE\\
+\textbf{No incluye:} capybol
+
+\hypertarget{valores-absolutos}{%
+\paragraph{Valores absolutos}\label{valores-absolutos}}
+
+\begin{longtable}[t]{lrrrr}
+\toprule
+color & L & S & VINTAGE & M\\
+\midrule
+BLANCO & 2 & 5 & 2 & 0\\
+CELESTE & 0 & 1 & 2 & 1\\
+CREMITA & 151 & 152 & 179 & 158\\
+FRANCIA & 0 & 2 & 3 & 3\\
+INGLES & 4 & 7 & 15 & 5\\
+\addlinespace
+LILA & 1 & 8 & 3 & 5\\
+MELANGE & 0 & 4 & 2 & 1\\
+NEGRO & 6 & 2 & 10 & 9\\
+PETROLEO & 215 & 181 & 179 & 214\\
+NA & 10 & 8 & 6 & 10\\
+\bottomrule
+\end{longtable}
+
+\hypertarget{valores-porcentuales-en-base-a-las-filas}{%
+\paragraph{Valores porcentuales en base a las
+filas}\label{valores-porcentuales-en-base-a-las-filas}}
+
+\begin{longtable}[t]{lllll}
+\toprule
+color & L & S & VINTAGE & M\\
+\midrule
+BLANCO & 22\% & 56\% & 22\% & 0\%\\
+CELESTE & 0\% & 25\% & 50\% & 25\%\\
+CREMITA & 24\% & 24\% & 28\% & 25\%\\
+FRANCIA & 0\% & 25\% & 38\% & 38\%\\
+INGLES & 13\% & 23\% & 48\% & 16\%\\
+\addlinespace
+LILA & 6\% & 47\% & 18\% & 29\%\\
+MELANGE & 0\% & 57\% & 29\% & 14\%\\
+NEGRO & 22\% & 7\% & 37\% & 33\%\\
+PETROLEO & 27\% & 23\% & 23\% & 27\%\\
+NA & 29\% & 24\% & 18\% & 29\%\\
+\bottomrule
+\end{longtable}
+
+\hypertarget{analisis-espacial}{%
+\subsection{ANALISIS ESPACIAL}\label{analisis-espacial}}
+
+\hypertarget{pedidos-por-provincia}{%
+\subsubsection{Pedidos por provincia}\label{pedidos-por-provincia}}
+
+\textbf{Tabla}
+
+\begin{longtable}[t]{lr}
+\toprule
+provincia & pedidos\\
+\midrule
+gran buenos aires & 448\\
+capital federal & 425\\
+buenos aires & 328\\
+santa fe & 82\\
+cordoba & 60\\
+\addlinespace
+entre rios & 22\\
+neuquen & 22\\
+rio negro & 18\\
+mendoza & 15\\
+tucuman & 15\\
+\addlinespace
+chaco & 8\\
+chubut & 6\\
+salta & 6\\
+corrientes & 5\\
+la pampa & 5\\
+\addlinespace
+tierra del fuego & 5\\
+santa cruz & 4\\
+santiago del estero & 4\\
+la rioja & 3\\
+san luis & 2\\
+\addlinespace
+catamarca & 1\\
+formosa & 1\\
+jujuy & 1\\
+misiones & 1\\
+\bottomrule
+\end{longtable}
+
+\textbf{Mapa} -sin referencia
+\includegraphics{INFORME_JULIO_files/figure-latex/unnamed-chunk-12-1.pdf}
+con referencia
+\includegraphics{INFORME_JULIO_files/figure-latex/unnamed-chunk-13-1.pdf}
+
+\hypertarget{pedidos-por-ciudad}{%
+\subsubsection{Pedidos por Ciudad}\label{pedidos-por-ciudad}}
+
+\begin{longtable}[t]{lr}
+\toprule
+Ciudad & pedidos\\
+\midrule
+capital federal & 417\\
+la plata & 162\\
+rosario & 43\\
+capital & 34\\
+la matanza & 30\\
+\addlinespace
+quilmes & 28\\
+general pueyrredon & 27\\
+lomas de zamora & 26\\
+lanus & 25\\
+avellaneda & 24\\
+\addlinespace
+vicente lopez & 24\\
+almirante brown & 23\\
+florencio varela & 20\\
+la capital & 20\\
+san fernando & 19\\
+\addlinespace
+berazategui & 18\\
+olavarria & 17\\
+general san martin & 16\\
+mar del plata & 16\\
+buenos aires & 15\\
+\addlinespace
+esteban echeverria & 15\\
+san isidro & 15\\
+moreno & 13\\
+san miguel & 12\\
+san miguel de tucuman & 11\\
+\addlinespace
+cordoba & 10\\
+merlo & 10\\
+moron & 10\\
+tandil & 9\\
+tres de febrero & 9\\
+\addlinespace
+ezeiza & 8\\
+ituzaingo & 8\\
+tigre & 8\\
+bahia blanca & 7\\
+bariloche & 7\\
+\addlinespace
+confluencia & 7\\
+cordoba capital & 7\\
+malvinas argentinas & 7\\
+caba & 6\\
+ensenada & 6\\
+\addlinespace
+parana & 6\\
+castellanos & 5\\
+concordia & 5\\
+lobos & 5\\
+mendoza & 5\\
+\addlinespace
+monte grande & 5\\
+santa fe & 5\\
+azul & 4\\
+banda & 4\\
+campana & 4\\
+\addlinespace
+castelar & 4\\
+lomas de zamora - buenos aires & 4\\
+longchamps & 4\\
+necochea & 4\\
+neuquen & 4\\
+\addlinespace
+rio grande & 4\\
+san lorenzo & 4\\
+zarate & 4\\
+centenario & 3\\
+escobar & 3\\
+\addlinespace
+general roca & 3\\
+godoy cruz & 3\\
+guaymallen & 3\\
+guer aike & 3\\
+la rioja & 3\\
+\addlinespace
+lujan & 3\\
+presidente peron & 3\\
+rio colorado & 3\\
+san justo & 3\\
+trelew & 3\\
+\addlinespace
+tucuman & 3\\
+wilde & 3\\
+adrogue & 2\\
+baradero & 2\\
+burzaco & 2\\
+\addlinespace
+calamuchita & 2\\
+canning & 2\\
+carlos casares & 2\\
+cerrito & 2\\
+cinco saltos & 2\\
+\addlinespace
+ciudad evita & 2\\
+claypole & 2\\
+coronel dorrego & 2\\
+cutral co & 2\\
+exaltacion de la cruz & 2\\
+\addlinespace
+gonzalez catan & 2\\
+gregorio de laferrere & 2\\
+gualeguay & 2\\
+gualeguaychu & 2\\
+hurlingham & 2\\
+\addlinespace
+jose clemente paz & 2\\
+lacar & 2\\
+laprida & 2\\
+las heras & 2\\
+lavallol & 2\\
+\addlinespace
+loncopue & 2\\
+lujan de cuyo & 2\\
+magdalena & 2\\
+mar chiquita & 2\\
+maraco & 2\\
+\addlinespace
+marcos paz & 2\\
+perez & 2\\
+pilar & 2\\
+pinamar & 2\\
+pontevedra & 2\\
+\addlinespace
+punilla & 2\\
+rio cuarto & 2\\
+san miguel del monte & 2\\
+san nicolas de los arroyos & 2\\
+sierra de los padres & 2\\
+\addlinespace
+tres arroyos & 2\\
+tristan suarez & 2\\
+uruguay & 2\\
+adolfo alsina & 1\\
+almafuerte & 1\\
+\addlinespace
+angel etcheverry, la plata & 1\\
+ayacucho & 1\\
+banfield & 1\\
+batan & 1\\
+beccar & 1\\
+\addlinespace
+belen & 1\\
+belen de escobar & 1\\
+berisso & 1\\
+biedma & 1\\
+bragado & 1\\
+\addlinespace
+carmen de patagones & 1\\
+chacabuco & 1\\
+chascomus & 1\\
+chivilcoy & 1\\
+cipolletti & 1\\
+\addlinespace
+city bell, la plata & 1\\
+ciudad autonoma buenos aires & 1\\
+comandante nicanor otamendi & 1\\
+coronel rosales & 1\\
+corrientes & 1\\
+\addlinespace
+diamante & 1\\
+doctor manuel belgrano & 1\\
+dolores & 1\\
+el colorado & 1\\
+el cuy & 1\\
+\addlinespace
+el jaguel & 1\\
+escalante & 1\\
+funes & 1\\
+general donovan & 1\\
+general las heras & 1\\
+\addlinespace
+general lopez & 1\\
+general rodriguez & 1\\
+general san martin, gran buenos aires & 1\\
+glew & 1\\
+gonnet & 1\\
+\addlinespace
+gral. pueyrredon & 1\\
+guamini & 1\\
+guernica & 1\\
+isidro casanova & 1\\
+jose leon suarez & 1\\
+\addlinespace
+jose marmol & 1\\
+junin & 1\\
+la costa & 1\\
+la plata, villa elisa & 1\\
+lanus oeste & 1\\
+\addlinespace
+libertador general san martin & 1\\
+lomas de zamora - temperley & 1\\
+lomas del mirador & 1\\
+los polvorines & 1\\
+maipu & 1\\
+\addlinespace
+martinez & 1\\
+mendiolaza & 1\\
+mercedes & 1\\
+miramar & 1\\
+monte caseros & 1\\
+\addlinespace
+moreno, cuartel v & 1\\
+neuque & 1\\
+nogoya & 1\\
+oncativo & 1\\
+paso del rey & 1\\
+\addlinespace
+quilmes oeste & 1\\
+quilmes/ ezpeleta & 1\\
+rada tilly & 1\\
+ramos mejia & 1\\
+ranos mejia & 1\\
+\addlinespace
+rio primero & 1\\
+rio segundo & 1\\
+rosario de la frontera & 1\\
+saldan & 1\\
+salta & 1\\
+\addlinespace
+salta capital & 1\\
+san antonio de areco, provincia de buenos aires & 1\\
+san carlos & 1\\
+san francisco & 1\\
+san martin & 1\\
+\addlinespace
+san nicolas & 1\\
+san salvador & 1\\
+san vicente & 1\\
+santa maria & 1\\
+santa rosa de calamuchita & 1\\
+\addlinespace
+santo tome & 1\\
+tafi viejo & 1\\
+tornquist & 1\\
+ushuaia & 1\\
+utracan & 1\\
+\addlinespace
+vicente lopez provincia de buenos aires & 1\\
+villa carlos paz & 1\\
+villa dominico & 1\\
+villa la angostura & 1\\
+villa mercedes & 1\\
+\addlinespace
+virreyes & 1\\
+zelaya. pilar & 1\\
+\bottomrule
+\end{longtable}
+
+\hypertarget{moto-mensajeria}{%
+\subsubsection{MOTO MENSAJERIA}\label{moto-mensajeria}}
+
+\textbf{Total de envios por motomensajería y pago al repartidor}
+
+\begin{verbatim}
+## # A tibble: 1 x 2
+##   total_de_envios sueldo_tio
+##             <int>      <dbl>
+## 1             224     895000
+\end{verbatim}
+
+\hypertarget{mapas-todo-el-codigo-por-rever}{%
+\subsection{MAPAS TODO EL CODIGO POR
+REVER}\label{mapas-todo-el-codigo-por-rever}}
+
+\end{document}
